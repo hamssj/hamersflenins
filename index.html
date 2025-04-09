@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Especial</title>
+    <!-- Fuente cursiva romántica -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <!-- Enlace al CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Música de fondo -->
+    <audio autoplay loop>
+        <source src="D:\hamers\circuitos elctricos 1\MUSICA.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Página de inicio -->
+    <div class="inicio">
+        <h1>Sheyla, para ti con mucho cariño :)</h1>
+        <img src="https://1.bp.blogspot.com/-yThkDX3AHSo/X2fq93ZnQXI/AAAAAAAAAb4/tpbnrFA6N4wvYUF5SFqnZwsCW0s9WljhwCLcBGAsYHQ/s1023/a504d263cf75dbca708bdef66900bb80.jpg" alt="Imagen de carta" class="carta-img">
+        <button id="abrir-carta" onclick="mostrarCarta()">Abrir carta</button>
+    </div>
+
+    <!-- Contenido de la carta -->
+    <div class="carta" id="carta" style="display:none;">
+        <div class="contenido-carta">
+            <h2>Mi Querida Sheyla</h2>
+            <p>
+                Sheyla,<br><br>
+                No podía hacer algo mejor que esto :) estuve haciendo pruebas con código en mi tiempo libre, y así te escribi esta carta virtual. Espero que te guste.<br><br>
+                Voya hacer descripciones figuradas con las cosas que estudie en mi carrera y otras cosas de futbol. Sheyla, contigo pasé de todo y lo sabes científicamente hablando, nos conocimos y fuiste mi primera ley de Newton: <strong>Para toda acción, existe una reacción (Te amé y me amaste). Entre tantos problemas que pasamos llegaste a ser  mi ley de Murphy: (podiamos fracasar, y fracasamos :( ).</strong> En ciertos puntos de la vida tambien fuiste mi ecuación de Eriac: <strong>Cuando dos sistemas interactúan entre ellos por cierto tiempo y se separan, se convierten en la misma esencia (convirtiéndonos en dos extraños con recuerdos en común). Pero si algo aprendí de la física cuántica... es que dos partículas entrelazadas, aunque estén a millones de años luz, siempre encontrarán la forma de reaccionar juntas.
+(Por eso aun creo :( que tú y yo somos la ecuación final del destino )  <strong> Tú + Yo = ∞ (infinito)
+
+Porque cuando la química es real, el universo conspira para que la ecuación se resuelva
+y nosotros estemos juntos para siempre. :)
+            </p>
+            <p>
+                Y futbolísticamente hablando, aún eres perfecta como la volea de Zidane  o como el tiro libre de Declan Rice que ayer hizo y te conte que eso nbo se retipe a menudo en el futbol, eres como la chilena de Cristiano Ronaldo tan perfecta, o como el penal de Matías. Eres elegante como los pases de Pirlo, los regates de Messi que son una obra maestra o como los toques de Román Riquelme. Tan emocionante como mis partidos del Barcelona, y tan alegre como Ronaldinho en su mejor momento.
+            </p>
+            <p>
+                Te prometo mantenerme fuerte, pero si llego a fracasar, no me verás caer derrotado, sino de pie, como lo hizo Roberto Baggio. Y si algún día eres tú la que cae, <strong>caeré contigo</strong>, como Marco Reus lo hizo con el Dortmund.
+            </p>
+            <p>
+                En definitiva, Sheyla, <strong>te quiero como al himno antes del partido, como un hincha a su equipo 💗</strong>.
+            </p>
+            <p style="text-align: right;">
+                Con cariño,<br>
+                <strong>Hamers</strong>
+            </p>
+            <button onclick="volver()">Volver</button>
+        </div>
+    </div>
+
+    <!-- Corazones flotantes -->
+    <div class="corazones">
+        <div class="corazon"></div>
+        <div class="corazon"></div>
+        <div class="corazon"></div>
+        <div class="corazon"></div>
+        <div class="corazon"></div>
+    </div>
+
+    <script>
+        function mostrarCarta() {
+            document.querySelector('.inicio').style.display = 'none';
+            document.querySelector('.carta').style.display = 'block';
+        }
+
+        function volver() {
+            document.querySelector('.carta').style.display = 'none';
+            document.querySelector('.inicio').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

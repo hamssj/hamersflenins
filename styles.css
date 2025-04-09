@@ -1,0 +1,137 @@
+/* Estilos generales */
+body {
+    font-family: 'Dancing Script', cursive;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ff6f61;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+button {
+    background-color: #ff5f57;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3f3b;
+}
+
+.inicio {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.carta-img {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carta {
+    background-color: white;
+    padding: 30px;
+    max-width: 700px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: aparecer 1s ease-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contenido-carta {
+    line-height: 1.6;
+    font-size: 20px;
+    color: #333;
+    text-align: justify;
+}
+
+.contenido-carta p {
+    margin-bottom: 20px;
+}
+
+/* Estilo para los corazones flotantes */
+.corazones {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.corazon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6f61;
+    transform: rotate(45deg);
+    animation: flotar 8s infinite ease-in-out;
+    opacity: 0.7;
+}
+
+.corazon::before,
+.corazon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+}
+
+.corazon::before {
+    top: -10px;
+    left: 0;
+}
+
+.corazon::after {
+    left: -10px;
+    top: 0;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+/* Posiciones aleatorias */
+.corazon:nth-child(1) { left: 10%; animation-delay: 0s; }
+.corazon:nth-child(2) { left: 30%; animation-delay: 2s; }
+.corazon:nth-child(3) { left: 50%; animation-delay: 4s; }
+.corazon:nth-child(4) { left: 70%; animation-delay: 1s; }
+.corazon:nth-child(5) { left: 90%; animation-delay: 3s; }
